@@ -1,17 +1,17 @@
 {
   "round": "round-2",
-  "team": "BB-XXX",
-  "queries_used": 0,
+  "team": "BB-017",
+  "queries_used":76,
   "claims": [
     {
       "type": "feature_effect",
-      "feature": "x1",
+      "feature": "years_registered",
       "direction": "increases",
-      "strength": "strong",
-      "confidence": 0.0,
+      "strength": "weak",
+      "confidence": 0.12,
       "evidence": {
-        "query_ids": [],
-        "summary": "Replace this example claim with your own. Every claim needs evidence."
+        "query_ids": [94],
+        "summary": "At query #94, changing years_registered to 4.9 produced a score of 0.9760, which was +0.0012 from the previous query. This indicates a small positive change in this specific comparison, but more controlled queries are needed to establish a reliable feature effect."
       }
     }
   ]
