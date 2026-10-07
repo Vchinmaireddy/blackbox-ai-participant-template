@@ -1,17 +1,50 @@
 {
   "round": "round-4",
-  "team": "BB-XXX",
-  "queries_used": 0,
+  "team": "BB-017",
+  "queries_used": 150,
   "claims": [
     {
       "type": "feature_effect",
-      "feature": "x1",
+      "feature": "age",
       "direction": "increases",
       "strength": "strong",
-      "confidence": 0.0,
+      "confidence": 0.98,
       "evidence": {
-        "query_ids": [],
-        "summary": "Replace this example claim with your own. Every claim needs evidence."
+        "query_ids": [73,79],
+        "summary": "In controlled Ward B observations, increasing years_registered from 10 to 40 reduced the score, with observed scores of 0.9594 at 10, 0.9529 at 20, 0.9278 at 30 and 0.9006 at 40."
+      }
+    }
+  {
+      "type": "feature_effect",
+      "feature": "ward",
+      "direction": "changes_score",
+      "strength": "weak",
+      "confidence": 0.82,
+      "evidence": {
+        "query_ids": [98, 99, 100, 101],
+        "summary": "Matched high-score probes produced different scores by ward: Ward B 0.9789, Ward A 0.9755, Ward C 0.9729 and Ward D 0.9657, indicating a small but observable categorical effect."
+      }
+    },
+    {
+      "type": "ignored_feature",
+      "feature": "dependants",
+      "direction": "no_observable_effect_in_tested_region",
+      "strength": "weak",
+      "confidence": 0.84,
+      "evidence": {
+        "query_ids": [60, 61, 102, 103],
+        "summary": "Matched high-score probes with different dependant values produced effectively unchanged scores, indicating little observable effect in the tested high-score region."
+      }
+    },
+    {
+      "type": "threshold",
+      "feature": "score",
+      "direction": "approve_above_threshold",
+      "strength": "strong",
+      "confidence": 0.98,
+      "evidence": {
+        "query_ids": [30, 31, 32, 33, 34],
+        "summary": "Round 1 boundary probing placed the APPROVE/DECLINE transition near 0.46; the reconstruction selected an optimized decision threshold of 0.4589 from out-of-fold predictions."
       }
     }
   ]
